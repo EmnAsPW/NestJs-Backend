@@ -1,0 +1,37 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateVideoDto {
+  description: String
+  filename: String!
+  tags: [String!]!
+  title: String!
+}
+
+type Mutation {
+  createVideo(createVideoDto: CreateVideoDto!): Video!
+  deleteVideo(id: ID!): Boolean!
+  updateVideo(updateVideoDto: UpdateVideoDto!): Video!
+}
+
+type Query {
+  getAllvideos: [Video!]!
+  getvideo(id: Int!): Video!
+}
+
+input UpdateVideoDto {
+  _id: ID!
+  description: [String!]!
+  tags: [String!]!
+  title: [String!]!
+}
+
+type Video {
+  _id: ID!
+  description: String!
+  filename: String!
+  tags: [String!]!
+  title: String
+  videoUrl: String!
+}
